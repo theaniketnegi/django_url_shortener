@@ -39,12 +39,12 @@ form{
 
 #submit {
   padding: 1em 2em;
-  width: 25%;
   background-color: #b09eff;
   border: none;
   outline: none;
   color: #ffffff;
   border-radius: 5px;
+  text-align: center;
 }
 #submit:hover{
   background-color: #bbacff;

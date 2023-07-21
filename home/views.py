@@ -14,6 +14,6 @@ def shorten(request):
         shortened_link.save()
         return HttpResponse(link_id)
 
-def redirectUrl(request, pk):
-    link_obj = LinkInfo.objects.get(link_id=pk)
+def redirectUrl(request, id):
+    link_obj = LinkInfo.objects.get(link_id=id)
     return redirect(link_obj.link)

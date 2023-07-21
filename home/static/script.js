@@ -8,7 +8,12 @@ function submitForm(e) {
     },
   })
     .then((response) => response.text())
-    .then((data) => (shortened.textContent = `http://${window.location.host}/${data}`))
+    .then((data) => {
+      shortened.textContent = `http://${window.location.host}/${data}`;
+      navigator.clipboard.writeText(shortened.textContent).then(() => {
+        console.log("Copied successfully");
+      });
+    })
     .catch((error) => console.error(error));
 }
 
