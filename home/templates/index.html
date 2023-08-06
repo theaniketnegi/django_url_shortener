@@ -5,20 +5,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URL Shortener</title>
-    <script src="{% static 'script.js'%}" defer></script>
-    <link rel="stylesheet" href="{% static 'style.css'%}">
+    <title>URL Shortener - 
+        {% block title %}
+            
+        {% endblock %}
+    </title>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
+
+    <!-- <link rel="stylesheet" href="{% static 'style2.css'%}"> -->
+
+    {% block meta %}
+        
+    {% endblock %}
+
+    <!-- <script src="{% static 'script.js'%}" defer></script> -->
 </head>
 
 <body>
-    <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="about">URL Shortener</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="shortener">Shortener</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about">About</a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">By Aniket Negi</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <br><br><br><br>
+
+
+
+
+
+
+    <!-- <div class="container">
         <form id="form">
             {% csrf_token %}
             <input type="text" placeholder="Enter URL..." id="url" name="url" required>
             <input type="submit" id="submit" value="Shorten">
         </form>
         <p id="shortened"></p>
-    </div>
+    </div> -->
+
+    {% block content %}
+        
+    {% endblock %}
 </body>
 
 </html>

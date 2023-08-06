@@ -3,8 +3,11 @@ import uuid
 from .models import LinkInfo
 from django.http import HttpResponse
 # Create your views here.
-def home(request):
-    return render(request, 'index.html')
+def homeAbout(request):
+    return render(request, 'about.html')
+
+def homeShortener(request):
+    return render(request, 'urlShortener.html')
 
 def shorten(request):
     if(request.method=="POST"):

@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 
 
-html {
+/* html {
     height: 100vh;
-}
+} */
 
 
 body {
@@ -11,7 +11,9 @@ body {
   font-family: "Poppins", sans-serif;
  
   
-  justify-content: center;
+  /* justify-content: center; */
+
+  /* vertical-align: middle; */
   
 }
 
@@ -20,7 +22,7 @@ body {
   padding: 5em 3em;
   border-radius: 10px;
   box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
-  height: 250px;
+  height: 200px;
   
   
   
