@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+URL Shortener    
+{% endblock %}
+
+{% block meta %}
+    <link rel="stylesheet" href="{% static 'style2.css'%}">
+    <script src="{% static 'script.js'%}" defer></script>
+{% endblock %}
+
+{% block content %}
+     <div class="container">
+        <form id="form">
+            {% csrf_token %}
+            <input type="text" placeholder="Enter URL..." id="url" name="url" required>
+            <input type="submit" id="submit" value="Shorten">
+        </form>
+        <p id="shortened"></p>
+    </div>
+{% endblock %}
