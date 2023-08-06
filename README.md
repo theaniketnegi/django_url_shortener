@@ -12,3 +12,6 @@ Start server
 ```bash
   python manage.py runserver
 ```
+## dependencies
+- Django
+- django-bootstrap-v5
